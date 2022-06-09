@@ -1,0 +1,20 @@
+.main{
+    min-height: 50vh;
+      padding: 2rem 0;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .TitleofBlog{
+        margin-top: -1rem;
+        text-decoration: underline;
+    }
+.container{
+    padding: 0 8rem;
+}
+.Alignment{
+    text-align: justify;
+    margin-bottom: 200px;
+}
