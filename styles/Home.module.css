@@ -12,22 +12,14 @@
   align-items: center;
 }
 
-.footer {
-  display: flex;
-  color: red;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
 
-.footer a {
+
+/* .footer a {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-}
+} */
 
 .title a {
   color: #0070f3;
@@ -144,6 +136,23 @@
 .MyPersonalBlogHeading{
   font-size: 2rem;
   font-weight: bold;
-  margin-right: 110px;
+  margin-right: 100px;
+  text-decoration: underline;  
+}
+.footer{
   
+  bottom: 0;
+margin-left: -33px;
+/* margin-right: px; */
+left: 0;
+right: 0;
+  width: 100vw;
+  height: 50px;
+  text-align: center;
+  background-color:#b44545
+}
+.footer span{
+  font-size: 20px;
+  color: black;
+  /* margin-top: 50px; */
 }

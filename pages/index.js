@@ -46,6 +46,12 @@ export default function Home() {
           <p>This blog will teach you how to run programs using Java Programming Language. </p>
         </div>
       </main>
+      <footer className={styles.footer}>
+  <span>Copyrights Reserved </span>
+ &nbsp;
+  <span>&copy;2022</span>
+</footer>
     </div>
+   
   );
 }
