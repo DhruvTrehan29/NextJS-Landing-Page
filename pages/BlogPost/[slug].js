@@ -1,20 +1,14 @@
 import React,{useEffect,useState} from 'react'
 import {useRouter} from 'next/router'
 import styles from '../../styles/BlogPost.module.css'
-const slug = () => {
-  const [blog, setBlog] = useState();
-  const router=useRouter();
-    useEffect(() => {
-      if(!router.isReady)return; 
-      const{slug}=router.query;
-      fetch(`http://localhost:3000/api/getBlog?slug=${slug}`).then((a)=>{
-        return a.json();  })
-        .then((parsed)=>{
-          console.log(parsed)
-          setBlog(parsed)
-        })
-    
-    }, [router.isReady])
+import * as fs from 'fs';
+const Slug = (props) => {
+  function createMarkup(c) {
+    return {__html: c};
+  }
+  
+  const [blog, setBlog] = useState(props.myblog);
+   
     
   return (
 
@@ -22,12 +16,36 @@ const slug = () => {
        <main className={styles.main}>
         <h1 className={styles.TitleofBlog}>{blog&&blog.title}</h1>
         <hr/>
-        <div className={styles.Alignment}>
-           {blog&&blog.content}
-        </div>
+       
+        {blog&& <div className={styles.Alignment} dangerouslySetInnerHTML={createMarkup(blog.content)}></div>}
+        
+      
         </main>
     </div>
   )
 }
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: {slug:'How-To-Learn-C++'} },
+      { params: {slug:'How-To-Learn-C++'} },
+      { params: {slug:'How-To-Learn-C++'} },
+      { params: {slug:'How-To-Learn-C++'} }
+    ],
+    fallback: true 
+  };
+}
 
-export default slug;
+
+
+export async function getStaticProps(context) {
+  // console.log(params);
+const{slug}=context.params;
+let myblog=await fs.promises.readFile(`BlogData/${slug}.json`,'utf-8')
+      return {
+        props:{myblog:JSON.parse(myblog)},
+      }
+}
+
+
+export default Slug;

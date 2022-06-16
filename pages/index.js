@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/Link";
 import styles from "../styles/Home.module.css";
 export default function Home() {
   return (
@@ -18,12 +16,8 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}> Curious Coder </h1>{" "}
-        <Image
-          src="/pics.jpg"
-          className={styles.Myimg}
-          width={300}
-          height={150}
-        />
+        
+        <img className={styles.Myimg} src="pics.jpg" width={300} height={150} alt="Curious Coder"/>
         <p> A blog by a coder for all the coders round the world </p>{" "}
         <span className={styles.MyPersonalBlogHeading}>
           
