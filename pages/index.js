@@ -18,26 +18,25 @@ export default function Home() {
         <h1 className={styles.title}> Curious Coder </h1>{" "}
         
         <img className={styles.Myimg} src="pics.jpg" width={300} height={150} alt="Curious Coder"/>
-        <p> A blog by a coder for all the coders round the world </p>{" "}
+        <p className={styles.frontLine}> A blog by a coder for all the coders round the world. </p>{" "}
         <span className={styles.MyPersonalBlogHeading}>
-          
           Personal Blog List
         </span>
         <div className="blogItem">
-          <h3> How to learn Java ? </h3>
-          <p>This blog will teach you how to run programs using Java Programming Language.</p>
+          <h3 className={styles.blogh}> How to learn Java ? </h3>
+          <p className={styles.bloghp}>This blog will teach you how to run programs using Java Programming Language.</p>
         </div>
         <div className="blogItem">
-          <h3> How to learn Python ? </h3>
-          <p> This blog will teach you how to run programs using Java Programming Language. </p>
+          <h3 className={styles.blogh}> How to learn Python ? </h3>
+          <p className={styles.bloghp}> This blog will teach you how to run programs using Java Programming Language. </p>
         </div>
         <div className="blogItem">
-          <h3> How to learn C++ ? </h3>
-          <p> This blog will teach you how to run programs using Java Programming Language. </p>
+          <h3 className={styles.blogh}> How to learn C++ ? </h3>
+          <p className={styles.bloghp}> This blog will teach you how to run programs using Java Programming Language. </p>
         </div>
         <div className="blogItem">
-          <h3> How to learn JavaScript ? </h3>
-          <p>This blog will teach you how to run programs using Java Programming Language. </p>
+          <h3 className={styles.blogh}> How to learn JavaScript ? </h3>
+          <p className={styles.bloghp}>This blog will teach you how to run programs using Java Programming Language. </p>
         </div>
       </main>
       <footer className={styles.footer}>

@@ -156,3 +156,41 @@ right: 0;
   color: black;
   /* margin-top: 50px; */
 }
+/*Media Queries For the navaBar*/
+@media (max-width: 400px) {
+  .mainNav ul{
+      padding-left: 0.9rem;
+      margin-right: -106px;
+  }
+  .mainNav ul li{
+font-size: 15px;
+margin:0 1.2rem ;
+  }
+  .title{
+    margin-left: 4rem;
+    font-size: 27px;
+    margin-right:-3rem;
+  }
+  .MyPersonalBlogHeading{
+    font-size: 1.4rem;
+    margin-right: -6rem;
+
+  }
+  .Myimg{
+    margin-left: 120px;
+  }
+  .frontLine{
+    margin-left: 60px;
+    margin-right: -74px;
+  }
+.blogh{
+  margin-left:81px;
+  margin-right: -42px;
+}
+.bloghp{
+  margin-left:80px;
+}
+.footer{
+  width: 26.6rem;
+}
+}

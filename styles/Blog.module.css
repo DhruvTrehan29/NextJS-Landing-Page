@@ -22,3 +22,21 @@ min-height: 50vh;
 .parasize{
   max-width: 45vw;
 }
+
+@media (max-width: 400px) {
+  .parasize{
+    max-width: 65vw;
+    margin-left: 50px;
+  }
+  .MyPersonalBlogHeading{
+    margin-left:6rem;
+  }
+  .blogItem{
+    margin-left: 50px;
+  }
+}
+@media (max-width: 600px) {
+  .parasize{
+    max-width: 76vw;
+  }
+}
